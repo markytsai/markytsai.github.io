@@ -5,21 +5,22 @@
   
 
   
-  <title>单例模式 | Hexo</title>
+  <title>单例模式 | Tsaizhenya博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="立即加载&#x2F;饿汉模式​       我们所理解的理解加载就是使用类的时候已经将对象创建，在需要目标对象的时候可以立即返回该对象的实例，常见的实现办法就是直接new实例化。下面看一下代码">
+<meta name="keywords" content="java,分布式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="单例模式">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;08&#x2F;%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F&#x2F;index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;09&#x2F;%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F&#x2F;index.html">
+<meta property="og:site_name" content="Tsaizhenya博客">
 <meta property="og:description" content="立即加载&#x2F;饿汉模式​       我们所理解的理解加载就是使用类的时候已经将对象创建，在需要目标对象的时候可以立即返回该对象的实例，常见的实现办法就是直接new实例化。下面看一下代码">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2018&#x2F;7&#x2F;19&#x2F;164ae2b4a055b758">
-<meta property="og:updated_time" content="2019-11-08T14:20:38.723Z">
+<meta property="og:updated_time" content="2019-11-08T14:32:25.185Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2018&#x2F;7&#x2F;19&#x2F;164ae2b4a055b758">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Tsaizhenya博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -38,7 +39,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">Tsaizhenya博客</a>
       </h1>
       
     </div>
@@ -70,8 +71,8 @@
       <div class="outer">
         <section id="main"><article id="post-单例模式" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/11/08/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" class="article-date">
-  <time datetime="2019-11-08T14:18:29.000Z" itemprop="datePublished">2019-11-08</time>
+    <a href="/2019/11/09/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" class="article-date">
+  <time datetime="2019-11-08T22:18:29.000Z" itemprop="datePublished">2019-11-08</time>
 </a>
     
   <div class="article-category">
@@ -131,7 +132,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/08/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" data-id="ck2q86k470000tkup77q58b4t" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/09/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" data-id="ck2q9fdvq0002acup81jndoox" class="article-share-link">Share</a>
       
       
     </footer>
@@ -140,7 +141,7 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/11/08/Comparable%E5%92%8CComparator%E7%9A%84%E6%AF%94%E8%BE%83/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/09/Comparable%E5%92%8CComparator%E7%9A%84%E6%AF%94%E8%BE%83/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
@@ -150,7 +151,7 @@
     </a>
   
   
-    <a href="/2019/11/06/NIO%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/11/07/NIO%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">NIO入门学习</div>
     </a>
@@ -210,19 +211,19 @@
       <ul>
         
           <li>
-            <a href="/2019/11/08/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E6%9D%82%E6%83%B3/">英语学习杂想</a>
+            <a href="/2019/11/09/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E6%9D%82%E6%83%B3/">英语学习杂想</a>
           </li>
         
           <li>
-            <a href="/2019/11/08/Comparable%E5%92%8CComparator%E7%9A%84%E6%AF%94%E8%BE%83/">Comparable和Comparator的比较</a>
+            <a href="/2019/11/09/Comparable%E5%92%8CComparator%E7%9A%84%E6%AF%94%E8%BE%83/">Comparable和Comparator的比较</a>
           </li>
         
           <li>
-            <a href="/2019/11/08/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">单例模式</a>
+            <a href="/2019/11/09/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">单例模式</a>
           </li>
         
           <li>
-            <a href="/2019/11/06/NIO%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/">NIO入门学习</a>
+            <a href="/2019/11/07/NIO%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/">NIO入门学习</a>
           </li>
         
       </ul>
@@ -237,7 +238,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019 John Doe<br>
+      &copy; 2019 caizhenya<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
