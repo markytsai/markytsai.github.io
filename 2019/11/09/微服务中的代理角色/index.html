@@ -87,13 +87,13 @@
 <meta property="og:site_name" content="Tsaizhenya博客">
 <meta property="og:description" content="代理是一种不可见的组件，它可以用来保障网络安全，优化带宽，服务器下线，控制请求流量和速度。网络中的请求发出之后，会经过许多代理才能到达目标服务器。 在计算机网络中，代理是客户端到服务器端的中间人。代理分为两种：正向代理，反向代理。正向代理提供安全隔离机制和性能优化的功能。客户端发出请求需要经过防火墙，请求本身是没有权限访问外网，此时就需要一个具有外网访问权限的组件来转发请求，这就是代理。代理负责接">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http:&#x2F;&#x2F;q0opyzozr.bkt.clouddn.com&#x2F;%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;q0opyzozr.bkt.clouddn.com&#x2F;proxy.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;09&#x2F;%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%90%86%E8%A7%92%E8%89%B2&#x2F;%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%90%86%E8%A7%92%E8%89%B2&#x2F;%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;09&#x2F;%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%90%86%E8%A7%92%E8%89%B2&#x2F;%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%90%86%E8%A7%92%E8%89%B2&#x2F;%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;q0opyzozr.bkt.clouddn.com&#x2F;%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86.png">
-<meta property="og:updated_time" content="2019-11-09T09:12:22.382Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;q0opyzozr.bkt.clouddn.com&#x2F;reverse-proxy.png">
+<meta property="og:updated_time" content="2019-11-09T09:15:19.553Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;q0opyzozr.bkt.clouddn.com&#x2F;%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86.png">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;q0opyzozr.bkt.clouddn.com&#x2F;proxy.png">
 
 
 
@@ -357,11 +357,12 @@
 
       
         <p>代理是一种不可见的组件，它可以用来保障网络安全，优化带宽，服务器下线，控制请求流量和速度。网络中的请求发出之后，会经过许多代理才能到达目标服务器。</p>
-<p>在计算机网络中，代理是客户端到服务器端的中间人。代理分为两种：正向代理，反向代理。<br>正向代理提供安全隔离机制和性能优化的功能。客户端发出请求需要经过防火墙，请求本身是没有权限访问外网，此时就需要一个具有外网访问权限的组件来转发请求，这就是代理。代理负责接收内网发出的请求，经过自身业务处理，将请求发出，对于外界来说，代理是透明的，请求表面上看起来是由客户端发出。 代理除了最基础的转发功能以外，还具有缓存，优化带宽等功能。<br><img src="http://q0opyzozr.bkt.clouddn.com/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86.png" alt=""></p>
+<p>在计算机网络中，代理是客户端到服务器端的中间人。代理分为两种：正向代理，反向代理。<br>正向代理提供安全隔离机制和性能优化的功能。客户端发出请求需要经过防火墙，请求本身是没有权限访问外网，此时就需要一个具有外网访问权限的组件来转发请求，这就是代理。代理负责接收内网发出的请求，经过自身业务处理，将请求发出，对于外界来说，代理是透明的，请求表面上看起来是由客户端发出。 代理除了最基础的转发功能以外，还具有缓存，优化带宽等功能。</p>
+<p><img src="http://q0opyzozr.bkt.clouddn.com/proxy.png" alt=""></p>
 <p><img src="%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%90%86%E8%A7%92%E8%89%B2/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86.png" alt=""></p>
 <p>对于服务端来说，代理的角色是反向的。服务器端利用代理来处理请求。反向代理可以提供安全性校验，负载均衡等功能。反向代理连接后端服务器集群，对于外界来说，不会知道具体是哪一台服务器在提供服务。同样的，反向代理也可以数据缓存，请求分发来提高服务端性能。</p>
 <p><img src="%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%90%86%E8%A7%92%E8%89%B2/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86.png" alt=""></p>
-<p><img src="http://q0opyzozr.bkt.clouddn.com/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86.png" alt=""></p>
+<p><img src="http://q0opyzozr.bkt.clouddn.com/reverse-proxy.png" alt=""></p>
 
       
     </div>
