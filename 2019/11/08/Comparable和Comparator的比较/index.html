@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="java," />
 
 
 
@@ -79,18 +79,16 @@
 
 
 
-<meta name="description" content="《Word Power Made Easy》这本书我已经看完了session 2，一定要说下我的感受。首先，书本小巧，只比手掌大一寸，但是知识丰富，其次行文流畅，远没有上学时期阅读文章带来的机械感，再次层次循序渐进，越读越想读下去，可以另外找笔记本来记录学习过程，也可以记在在线笔记本上，便于随时温习。  书籍的相关评价可以参考这里  https:&#x2F;&#x2F;www.goodreads.com&#x2F;book&#x2F;s">
-<meta name="keywords" content="java,分布式">
+<meta name="description" content="本文是对Java中两种比较方式的阐述。">
+<meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Word Power Made Easy 读书笔记">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;09&#x2F;Word-Power-Made-Easy-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0&#x2F;index.html">
+<meta property="og:title" content="Comparable和Comparator的比较">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;08&#x2F;Comparable%E5%92%8CComparator%E7%9A%84%E6%AF%94%E8%BE%83&#x2F;index.html">
 <meta property="og:site_name" content="Tsaizhenya博客">
-<meta property="og:description" content="《Word Power Made Easy》这本书我已经看完了session 2，一定要说下我的感受。首先，书本小巧，只比手掌大一寸，但是知识丰富，其次行文流畅，远没有上学时期阅读文章带来的机械感，再次层次循序渐进，越读越想读下去，可以另外找笔记本来记录学习过程，也可以记在在线笔记本上，便于随时温习。  书籍的相关评价可以参考这里  https:&#x2F;&#x2F;www.goodreads.com&#x2F;book&#x2F;s">
+<meta property="og:description" content="本文是对Java中两种比较方式的阐述。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http:&#x2F;&#x2F;pzxg8w299.bkt.clouddn.com&#x2F;4b21bffefb7c469faf121f1e33c11395.png">
-<meta property="og:updated_time" content="2019-11-09T04:31:23.275Z">
+<meta property="og:updated_time" content="2019-11-09T02:52:26.565Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;pzxg8w299.bkt.clouddn.com&#x2F;4b21bffefb7c469faf121f1e33c11395.png">
 
 
 
@@ -120,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/09/Word-Power-Made-Easy-读书笔记/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/11/08/Comparable和Comparator的比较/"/>
 
 
 
 
 
-  <title>Word Power Made Easy 读书笔记 | Tsaizhenya博客</title>
+  <title>Comparable和Comparator的比较 | Tsaizhenya博客</title>
   
 
 
@@ -233,7 +231,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/09/Word-Power-Made-Easy-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/08/Comparable%E5%92%8CComparator%E7%9A%84%E6%AF%94%E8%BE%83/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="caizhenya">
@@ -250,7 +248,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Word Power Made Easy 读书笔记</h1>
+          <h1 class="post-title" itemprop="name headline">Comparable和Comparator的比较</h1>
         
 
         <div class="post-meta">
@@ -262,8 +260,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-09T12:12:52+08:00">
-                2019-11-09
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-08T22:19:04+08:00">
+                2019-11-08
               </time>
             
 
@@ -272,6 +270,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index">
+                    <span itemprop="name">Java基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -317,6 +337,10 @@
           
 
           
+              <div class="post-description">
+                  本文是对Java中两种比较方式的阐述。
+              </div>
+          
 
         </div>
       </header>
@@ -331,82 +355,30 @@
       
 
       
-        <p>《Word Power Made Easy》这本书我已经看完了session 2，一定要说下我的感受。首先，书本小巧，只比手掌大一寸，但是知识丰富，其次行文流畅，远没有上学时期阅读文章带来的机械感，再次层次循序渐进，越读越想读下去，可以另外找笔记本来记录学习过程，也可以记在在线笔记本上，便于随时温习。</p>
-<p><img src="http://pzxg8w299.bkt.clouddn.com/4b21bffefb7c469faf121f1e33c11395.png" alt="image.png"></p>
-<p>书籍的相关评价可以参考这里</p>
-<ul>
-<li><a href="https://www.goodreads.com/book/show/827597.Word_Power_Made_Easy" target="_blank" rel="noopener">https://www.goodreads.com/book/show/827597.Word_Power_Made_Easy</a></li>
-<li><a href="https://www.flipkart.com/word-power-made-easy/p/itmfc4zjwegzgkkh" target="_blank" rel="noopener">https://www.flipkart.com/word-power-made-easy/p/itmfc4zjwegzgkkh</a></li>
-<li><a href="https://www.amazon.in/Word-Power-Made-Norman-Lewis/dp/8183071007" target="_blank" rel="noopener">https://www.amazon.in/Word-Power-Made-Norman-Lewis/dp/8183071007</a></li>
-</ul>
-<p>不论母语本身就是英语的人，还是语言学习者，都对这本书作了很高的评价，对于我们刚刚开始想要提高英语水平的人，是一个不错的阅读选择，我自身也已经开始阅读这本书，到此时已经学完了前两个session。</p>
-<p>下面列举出前两节中的重要词汇</p>
-<ol>
-<li><strong>egoist</strong> 利己主义者<ul>
-<li>a self-centered or selfish person (opposed to altruist).</li>
-<li>an arrogantly conceited person; egotist.</li>
-<li>an adherent of the metaphysical principle of the ego, or self; solipsist</li>
-</ul>
-</li>
-</ol>
-<ol start="2">
-<li><strong>egotist</strong> 自我主义者</li>
-</ol>
-<ul>
-<li>a conceited, boastful person.</li>
-<li>a selfish person; egoist.</li>
-</ul>
-<ol start="3">
-<li><strong>altruist</strong> 利他主义者</li>
-</ol>
-<ul>
-<li>a person unselfishly concerned for or devoted to the welfare of others (opposed to egoist).</li>
-</ul>
-<ol start="4">
-<li><strong>introvert</strong> 个性内向者</li>
-</ol>
-<ul>
-<li>a shy person.</li>
-<li>Psychology. a person characterized by concern primarily with his or her own thoughts and feelings (opposed to extrovert).</li>
-<li>Zoology. a part that is or can be introverted. </li>
-</ul>
-<ol start="5">
-<li><strong>extrovert</strong> 个性外向的</li>
-</ol>
-<ul>
-<li>an outgoing, gregarious person.</li>
-<li>Psychology. a person characterized by extroversion; a person concerned primarily with the physical and social environment (opposed to introvert).</li>
-</ul>
-<ol start="6">
-<li><strong>ambivert</strong> 中间性格</li>
-</ol>
-<ul>
-<li>one whose personality type is intermediate between extrovert and introvert.</li>
-</ul>
-<ol start="7">
-<li><strong>misanthrope</strong>  愤世嫉俗者</li>
-</ol>
-<ul>
-<li>a hater of humankind.</li>
-</ul>
-<ol start="8">
-<li><strong>misogynist</strong> 厌恶女人的人</li>
-</ol>
-<ul>
-<li>a person who hates, dislikes, mistrusts, or mistreats women.</li>
-</ul>
-<ol start="9">
-<li><strong>misogamist</strong> 厌恶婚姻的人</li>
-</ol>
-<ul>
-<li>hatred of marriage.</li>
-</ul>
-<ol start="10">
-<li><strong>ascetic</strong> 禁欲者， 苦行憎</li>
-</ol>
-<ul>
-<li>characterized by or suggesting the practice of severe self-discipline and abstention from all forms of indulgence, typically for religious reasons.</li>
-</ul>
+        <p>本文是对Java中两种比较方式的阐述。 </p>
+<p>Comparable接口的定义可以看出是一个泛型，声明如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public interface Comparable&lt;T&gt; &#123;</span><br><span class="line">    /**</span><br><span class="line">     * @param   o the object to be compared.</span><br><span class="line">     * @return  a negative integer, zero, or a positive integer as this object</span><br><span class="line">     *          is less than, equal to, or greater than the specified object.</span><br><span class="line">     *</span><br><span class="line">     * @throws NullPointerException if the specified object is null</span><br><span class="line">     * @throws ClassCastException if the specified object&apos;s type prevents it</span><br><span class="line">     *         from being compared to this object.</span><br><span class="line">     */</span><br><span class="line">    public int compareTo(T o);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当返回结果是负值、零、正值的时候，分别代表着当前对象小于、等于、大于传进来的参数值。下面举一个例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">class Person implements Comparable&lt;Person&gt; &#123;</span><br><span class="line">	private String name;</span><br><span class="line">	private int age;</span><br><span class="line"></span><br><span class="line">	public Person(String name, int age) &#123;</span><br><span class="line">		super();</span><br><span class="line">		this.name = name;</span><br><span class="line">		this.age = age;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public String toString() &#123;</span><br><span class="line">		return &quot;Person [name=&quot; + name + &quot;, age=&quot; + age + &quot;]&quot;;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public String getName() &#123;</span><br><span class="line">		return name;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public int getAge() &#123;</span><br><span class="line">		return age;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public int compareTo(Person o) &#123;</span><br><span class="line">		// TODO Auto-generated method stub</span><br><span class="line">		return this.age - o.age;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">	public void comparableTest() &#123;</span><br><span class="line">		List&lt;Person&gt; group = new ArrayList&lt;&gt;();</span><br><span class="line">		group.add(new Person(&quot;aa&quot;, 10));</span><br><span class="line">		group.add(new Person(&quot;bb&quot;, 5));</span><br><span class="line">		group.add(new Person(&quot;cc&quot;, 20));</span><br><span class="line"></span><br><span class="line">		Collections.sort(group);</span><br><span class="line">		group.forEach(p -&gt; System.out.println(p));</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Person [name=bb, age=5]</span><br><span class="line">Person [name=aa, age=10]</span><br><span class="line">Person [name=cc, age=20]</span><br></pre></td></tr></table></figure>
+<p>返回正数，表示this指示的值要排在传进参数值的后面，这个可以理解为对每一个数和它后面的数进行比较，如果返回正值，那么需要交换位置，也就是升序排列；返回负值的推理类似。</p>
+<p>这里是类实现Comparable<T>接口，并且要求重写<code>public int compareTo(Person o);</code>方法。但是如果我们不能对类进行修改，那么该怎么对对象进行排序呢，还有另外一种实现排序的方法，就是实现Comparator<T>接口排序。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Collections.sort(group, new Comparator&lt;Person&gt;() &#123;</span><br><span class="line">                @Override</span><br><span class="line">		public int compare(Person o1, Person o2) &#123;</span><br><span class="line">			return o2.getAge() - o1.getAge();</span><br><span class="line">		&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>在这里，当o2的age值大于o1的age值时，o2和o1的位置需要交换，所以这里的结果是以降序排列呈现的。<br>在Java1.8之后，可以使用lambda表达式来进一步简化代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">group.sort((o1, o2) -&gt; o1.getAge() - o2.getAge());</span><br></pre></td></tr></table></figure>
+<p>也可以这样写，使用Comparator.comparing的方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">group.sort(Comparator.comparing(person -&gt; person.getAge()));</span><br></pre></td></tr></table></figure>
+
+<p>使用静态方法的引用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">group.sort(Comparator.comparing(Person::getAge));</span><br></pre></td></tr></table></figure>
+<p>如果需要逆序排列，需要reverse()函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">group.sort(Comparator.comparing(Person::getAge).reverse());</span><br></pre></td></tr></table></figure>
+
+<p>可以把多个Comparator链在一起去逐步实现更复杂的比较逻辑</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">group.sort(Comparator.comparing(Person::getAge).thenComparing(Person::getName));</span><br></pre></td></tr></table></figure>
+
+
 
       
     </div>
@@ -422,6 +394,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+        </div>
+      
 
       
       
@@ -431,8 +409,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/08/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E6%9D%82%E6%83%B3/" rel="next" title="英语学习杂想">
-                <i class="fa fa-chevron-left"></i> 英语学习杂想
+              <a href="/2019/11/08/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" rel="next" title="单例模式">
+                <i class="fa fa-chevron-left"></i> 单例模式
               </a>
             
           </div>
@@ -441,8 +419,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/09/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%90%86%E8%A7%92%E8%89%B2/" rel="prev" title="微服务中的代理角色">
-                微服务中的代理角色 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/08/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E6%9D%82%E6%83%B3/" rel="prev" title="英语学习杂想">
+                英语学习杂想 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
