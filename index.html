@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="en">
+<html class="theme-next mist use-motion" lang="en">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -59,7 +59,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.ico?v=5.1.4">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
@@ -93,9 +93,9 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Mist',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -187,6 +187,26 @@
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/%20" rel="section">
             
@@ -198,9 +218,47 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
   
 </nav>
 
@@ -234,7 +292,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="caizhenya">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -304,6 +362,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
+          
 
           
 
@@ -321,36 +410,14 @@
 
       
         
-          
-            <blockquote>
-<p>IF YOU SURVIVE, YOU DESERVE.</p>
-</blockquote>
-<p>从初中时候学习英语，到现在工作，也没有对学习英语懈怠，虽然说中间过程有很多时间都没有真正深入学习过，但是也希望写一篇总结。</p>
-<p>现在我所能感受到的是</p>
-<ol>
-<li>有序列表发音不够准确，有些单词发音，句子之间停顿，连音，还有语调的使用不是很好</li>
-<li>有序列表单词量匮乏，虽然在大部分情况下不会对阅读造成影响，但是在一些阅读场景中，会对逻辑理解带来困难</li>
-<li>有序列表流利度，这里指的是口语，仍然不能够流利的对话</li>
-</ol>
-<p>这是我现在的问题所在，当然也是我的第一个瓶颈。经过这些年学习，我总结了一句话，从使用性质来说，<strong>英语流利为王</strong>。口语流利，不影响交流，阅读流利，不影响理解。达到这种地步，便可以认为英语语言自由了。</p>
-<p>这里提到一点:世界上没有标准的英文发音，但是你需要准确。 —–十六<br>在准确且自信的情况下，十六借用女王的一句话赠给你</p>
-<p><img src="http://pzxg8w299.bkt.clouddn.com/3898c83274dc4b70b9bea0a61a10d647.png#center" alt="image.png"></p>
-<p>首先是发音，发音可以根据下面这个B站上这个经典的教学视频来学习，这个视频值得反反复复去看，这里特别推荐。这里有两个视频，<a href="https://www.bilibili.com/video/av54685652" target="_blank" rel="noopener">这个</a>有字幕，<a href="https://www.bilibili.com/video/av7298196" target="_blank" rel="noopener">这个</a>无字幕，看了几遍以后可以选择无字幕的视频，更可以锻炼听力。</p>
-<p><img src="http://pzxg8w299.bkt.clouddn.com/93a72c4ae0d8471a8a433e748d46bdee.png" alt="image.png"></p>
-<p>其次是词汇。词汇学习其实是最忌讳背单词的。因为我们知道句子段落由词汇之间的关联关系组成，正确的做法应该是<strong>从句子段落中学习词汇</strong>，而不是反其道行之。遇到新的词汇不要急于寻求词典的帮助，而是通过上下文来推断其含义，如果对整体理解没有造成影响，直接跳过也未尝不可。关于词汇这里我推荐一本书《Word Power Made Esay》，作者是Norman Lewis，豆瓣评价在<a href="https://book.douban.com/subject/1756614/" target="_blank" rel="noopener">这里</a>。—这本书我刚刚开始学习，已经成为了我的桌边枕边读物。极力推荐。</p>
-<p><img src="http://pzxg8w299.bkt.clouddn.com/2607944a725d4351a4409ab4b3dc2f52.png" alt="image.png"></p>
-<p>待我把这本书看完一遍后，再来写一篇关于此书的文章。后续还打算多读几遍，更新文章。</p>
-<p>阅读和口语我觉得两者有密切的关系，口语的素材来源很大部分出自阅读，平时博览群书，在交流的时候就更能找到话题。流利度经常被大家作为判断口语好坏的一个标准，其实这确实是这样子，交流本身就是信息的交换，流利度带给我们的是听懂对方表达的意思，让对方听懂我的想法。流利度还是雅思考试的参考标准之一。</p>
-<p><strong>那么，应该如何提高流利度呢？</strong></p>
-<p>我觉得可以按照下面的步骤进行，这也是我最近一直在实践的。</p>
-<ul>
-<li>根据自己的兴取挑选英文读物，难度要根据自身水平进行匹配，量力而行，之前买了一本书《Pride and Prejudice》，这本书难度适中，非常适合当下的我</li>
-<li>找一部美剧，这里推荐一些生活化的美剧，生活化指的是没有那种引人入胜剧情的电视剧，比如悬疑，惊悚，喜剧等。这些电视剧很容易把注意力带到剧情里，而忽略了我们的目的—说话。这里十六推荐搜狐视频，最主要的一点是搜狐视频可以去字幕，这个对于学习英语的人真的不要太好。</li>
-<li>收听一些广播，比如BBC,VOA,CNN,NPR等。在哪里找这些广播收听呢，这里十六极力推荐每日英语听力这个软件，里面的电台完全可以覆盖你的学习需求。在苹果商店里，还有一个软件叫做UK Radios，这个软件在UK的广播列表下细分比较好，大家可以按需食用。</li>
-</ul>
-<p>这些是我总结的一些学习方法，而且这些仍然在实践当中，我也希望总结出更多的方法来提高自己和帮助大家，而且我也会找寻学习资源，之后分享出来。</p>
-
-          
+          从初中时候学习英语，到现在工作，也没有对学习英语懈怠，虽然说中间过程有很多时间都没有真正深入学习过，但是也希望写一篇总结。
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/11/09/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E6%9D%82%E6%83%B3/">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -402,7 +469,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="caizhenya">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -472,6 +539,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
+          
 
           
 
@@ -489,33 +587,14 @@
 
       
         
-          
-            <p>本文是对Java中两种比较方式的阐述。 </p>
-<p>Comparable接口的定义可以看出是一个泛型，声明如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public interface Comparable&lt;T&gt; &#123;</span><br><span class="line">    /**</span><br><span class="line">     * @param   o the object to be compared.</span><br><span class="line">     * @return  a negative integer, zero, or a positive integer as this object</span><br><span class="line">     *          is less than, equal to, or greater than the specified object.</span><br><span class="line">     *</span><br><span class="line">     * @throws NullPointerException if the specified object is null</span><br><span class="line">     * @throws ClassCastException if the specified object&apos;s type prevents it</span><br><span class="line">     *         from being compared to this object.</span><br><span class="line">     */</span><br><span class="line">    public int compareTo(T o);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>当返回结果是负值、零、正值的时候，分别代表着当前对象小于、等于、大于传进来的参数值。下面举一个例子。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">class Person implements Comparable&lt;Person&gt; &#123;</span><br><span class="line">	private String name;</span><br><span class="line">	private int age;</span><br><span class="line"></span><br><span class="line">	public Person(String name, int age) &#123;</span><br><span class="line">		super();</span><br><span class="line">		this.name = name;</span><br><span class="line">		this.age = age;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public String toString() &#123;</span><br><span class="line">		return &quot;Person [name=&quot; + name + &quot;, age=&quot; + age + &quot;]&quot;;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public String getName() &#123;</span><br><span class="line">		return name;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public int getAge() &#123;</span><br><span class="line">		return age;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public int compareTo(Person o) &#123;</span><br><span class="line">		// TODO Auto-generated method stub</span><br><span class="line">		return this.age - o.age;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">	public void comparableTest() &#123;</span><br><span class="line">		List&lt;Person&gt; group = new ArrayList&lt;&gt;();</span><br><span class="line">		group.add(new Person(&quot;aa&quot;, 10));</span><br><span class="line">		group.add(new Person(&quot;bb&quot;, 5));</span><br><span class="line">		group.add(new Person(&quot;cc&quot;, 20));</span><br><span class="line"></span><br><span class="line">		Collections.sort(group);</span><br><span class="line">		group.forEach(p -&gt; System.out.println(p));</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<p>运行结果如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Person [name=bb, age=5]</span><br><span class="line">Person [name=aa, age=10]</span><br><span class="line">Person [name=cc, age=20]</span><br></pre></td></tr></table></figure>
-<p>返回正数，表示this指示的值要排在传进参数值的后面，这个可以理解为对每一个数和它后面的数进行比较，如果返回正值，那么需要交换位置，也就是升序排列；返回负值的推理类似。</p>
-<p>这里是类实现Comparable<T>接口，并且要求重写<code>public int compareTo(Person o);</code>方法。但是如果我们不能对类进行修改，那么该怎么对对象进行排序呢，还有另外一种实现排序的方法，就是实现Comparator<T>接口排序。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Collections.sort(group, new Comparator&lt;Person&gt;() &#123;</span><br><span class="line">                @Override</span><br><span class="line">		public int compare(Person o1, Person o2) &#123;</span><br><span class="line">			return o2.getAge() - o1.getAge();</span><br><span class="line">		&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>在这里，当o2的age值大于o1的age值时，o2和o1的位置需要交换，所以这里的结果是以降序排列呈现的。<br>在Java1.8之后，可以使用lambda表达式来进一步简化代码。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">group.sort((o1, o2) -&gt; o1.getAge() - o2.getAge());</span><br></pre></td></tr></table></figure>
-<p>也可以这样写，使用Comparator.comparing的方式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">group.sort(Comparator.comparing(person -&gt; person.getAge()));</span><br></pre></td></tr></table></figure>
-
-<p>使用静态方法的引用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">group.sort(Comparator.comparing(Person::getAge));</span><br></pre></td></tr></table></figure>
-<p>如果需要逆序排列，需要reverse()函数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">group.sort(Comparator.comparing(Person::getAge).reverse());</span><br></pre></td></tr></table></figure>
-
-<p>可以把多个Comparator链在一起去逐步实现更复杂的比较逻辑</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">group.sort(Comparator.comparing(Person::getAge).thenComparing(Person::getName));</span><br></pre></td></tr></table></figure>
-
-
-
-          
+          本文是对Java中两种比较方式的阐述。
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/11/09/Comparable%E5%92%8CComparator%E7%9A%84%E6%AF%94%E8%BE%83/">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -567,7 +646,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="caizhenya">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -637,6 +716,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
+          
 
           
 
@@ -654,10 +764,10 @@
 
       
         
-          <h3 id="立即加载-饿汉模式"><a href="#立即加载-饿汉模式" class="headerlink" title="立即加载/饿汉模式"></a>立即加载/饿汉模式</h3><p>​       我们所理解的理解加载就是使用类的时候已经将对象创建，在需要目标对象的时候可以立即返回该对象的实例，常见的实现办法就是直接new实例化。下面看一下代码</p>
+          主要介绍单例模式的使用例子
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/11/09/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/#more" rel="contents">
+            <a class="btn" href="/2019/11/09/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
               Read more &raquo;
             </a>
           </div>
@@ -713,7 +823,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="caizhenya">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -783,6 +893,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
+          
 
           
 
@@ -800,57 +941,14 @@
 
       
         
-          
-            <p>很早之前，接触了IO，也匆匆瞥了一眼NIO，这次重新拾起NIO，在此记录学习过程和思考。</p>
-<h3 id="IO和NIO之间的区别"><a href="#IO和NIO之间的区别" class="headerlink" title="IO和NIO之间的区别"></a>IO和NIO之间的区别</h3><p>Nio的出现是在jdk1.4版本中，在java.nio.*包中，是此版本引入的新的IO库，目的主要是提高IO速度和效率。<br>Nio: non-blocking io，即非阻塞IO</p>
-<p>首先看下在Java中IO和NIO之间的区别</p>
-<table>
-<thead>
-<tr>
-<th>IO</th>
-<th>NIO</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>基于流</td>
-<td>基于缓冲区</td>
-</tr>
-<tr>
-<td>阻塞IO</td>
-<td>非阻塞IO</td>
-</tr>
-</tbody></table>
-<h4 id="流-vs-缓冲区"><a href="#流-vs-缓冲区" class="headerlink" title="流 vs 缓冲区"></a>流 vs 缓冲区</h4><p>NIO和IO最大的区别之一是IO是基于流，而NIO是基于缓冲区。基于流是什么意思?我们可以想象一下，一串数据像流水一样通过网络传输到本地，程序通过某种方法从流中取出数据，当然这里的数据都是以字节形式存在的。程序获取了一连串byte数据，然后会进行后续操作，但是我们如果想要获取指定位置的数据，比如我们需要跳过首部一个字节，从第二个字节开始取数据，这在IO模式下就无法实现。我们需要把数据置于一个固定的地点，借助指针或者偏移量来获取指定位置字节，这样就可以达到我们的需求。而这正是NIO的思考所在。</p>
-<p>NIO将数据读取到缓冲区中，NIO称之为buffer，在buffer这个数据结构中，我们可以随意获取buffer任何位置的字节数据，也可以判断字节数是否达到要求进而可以一次性读取数据。buffer具有定长的性质，它可以扩容，但是会有覆盖数据的风险，这就需要应用自身去处理这种情况。</p>
-<h4 id="阻塞-vs-非阻塞"><a href="#阻塞-vs-非阻塞" class="headerlink" title="阻塞 vs 非阻塞"></a>阻塞 vs 非阻塞</h4><p>Java中IO流是具有阻塞性质的。所谓阻塞，即一个读线程调用了read()方法或者write()方法后，此线程就会阻塞，直到有数据被读进来或者数据完全被写到磁盘上。在这个时候，线程无法做任何事情。</p>
-<p>NIO的思路就是要打破这种情况。NIO需要一个较做channel的角色参与，单独一个线程负责从channel中读取数据，此线程可以得知是否有数据读进来或者是没有数据，这是一个即时的返回结果，然后线程可以监听其他channel，进行同样的动作而不会被阻塞。</p>
-<p>了解了IO和NIO的区别和关系之后，我们可以进一步剖析NIO的模型和实现。</p>
-<p>上面已经说过NIO是基于buffer的IO方法集合。在NIO中，操作的基本单位是channel和buffer。下图初步揭示了NIO的的读写数据模型。</p>
-<p><img src="./../images/nio-tutorial7.png" alt=""></p>
-<h3 id="buffer-amp-channel-amp-selector"><a href="#buffer-amp-channel-amp-selector" class="headerlink" title="buffer &amp; channel &amp; selector"></a>buffer &amp; channel &amp; selector</h3><h4 id="buffer"><a href="#buffer" class="headerlink" title="buffer"></a>buffer</h4><p>缓冲区的思想是IO工作的基础。我们说的输入输出都是应用程序和操作系统数据层面的流动。输入，操作系统将数据从磁盘等存储设备读到缓冲区，直到缓冲区满，由应用程序读取缓冲区的数据；输出，应用程序将数据写到缓冲区，直到缓冲区满，操作系统读取缓冲区数据写到磁盘等存储设备中。这里的数据经过用户空间和内核空间。两者的关系如下图：</p>
-<p><img src="https://user-gold-cdn.xitu.io/2019/11/8/16e4b1473819068a?w=794&h=344&f=png&s=109089" alt=""></p>
-<h4 id="channel"><a href="#channel" class="headerlink" title="channel"></a>channel</h4><p>NIO的缓冲区类似，我们可以想象buffer就是应用程序和外接的一个中介，来缓冲读入的数据和写出的数据。</p>
-<p>Channel相当于位于buffer和数据源和数据目的地的中间位置角色，所有的数据都需要经过channel写到buffer，或者经过channel从buffer写出去。channel有一种类似网关的含义。</p>
-<p>在设计的顶层，channel是一个接口，如下</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> java.nio.channels;  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Channel</span></span>&#123;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isclose</span><span class="params">()</span></span>;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Open</span><span class="params">()</span> <span class="keyword">throws</span> IOException</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="selector"><a href="#selector" class="headerlink" title="selector"></a>selector</h4><p>selector可以认为是channel的一个多路转换器。它可以检测多个channel的状态，进而决定哪个channel达到了数据ready的状态，然后进行后续的读写操作。</p>
-<p>selector是单线程模式，处理多个channel，相比于一个selector监听一个channel，这样避免了线程的频繁切换，可以提高系统性能。</p>
-<p>常见的selector， channel模型如下图所示</p>
-<p><img src="https://user-gold-cdn.xitu.io/2019/11/8/16e4afedf3e70117?w=347&h=282&f=png&s=3760" alt=""></p>
-<p>完善的API可以参考<a href="https://docs.oracle.com/javase/8/docs/api/java/nio/channels/package-summary.html" target="_blank" rel="noopener">官方API文档</a></p>
-<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ServerSocket</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="keyword">final</span> <span class="keyword">int</span> port = <span class="number">8080</span>;</span><br><span class="line">        <span class="comment">// 获得Selector</span></span><br><span class="line">        Selector socketSelector = Selector.open();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 打开socket通道</span></span><br><span class="line">        ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();</span><br><span class="line">        <span class="comment">// 配置为非阻塞模式</span></span><br><span class="line">        serverSocketChannel.configureBlocking(<span class="keyword">false</span>);</span><br><span class="line">        <span class="comment">// 获取服务器socket</span></span><br><span class="line">        ServerSocket serverSocket = serverSocketChannel.socket();</span><br><span class="line">        <span class="comment">// 绑定端口</span></span><br><span class="line">        InetSocketAddress address = <span class="keyword">new</span> InetSocketAddress(ports[i]);</span><br><span class="line">        <span class="comment">// 绑定到服务器socket</span></span><br><span class="line">        serverSocket.bind(address);</span><br><span class="line">        <span class="comment">// 注册selector</span></span><br><span class="line">        serverSocketChannel.register(socketSelector, SelectionKey.OP_ACCEPT);</span><br><span class="line">        System.out.println(<span class="string">"服务器正在监听 "</span> + port + <span class="string">" 端口..."</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 处理请求</span></span><br><span class="line">        handle(socketSelector);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">handle</span><span class="params">(Selector selector)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">// 轮询channel，如果有至少一个channel准备好，则返回一个正数</span></span><br><span class="line">        <span class="keyword">while</span> (selector.select() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            </span><br><span class="line">            Set&lt;SelectionKey&gt; set = selector.keys();</span><br><span class="line">            Iterator&lt;SelectionKey&gt; iter = set.iterator();</span><br><span class="line">            <span class="keyword">while</span> (iter.hasNext()) &#123;</span><br><span class="line">                SelectionKey key = iter.next();</span><br><span class="line">                <span class="keyword">if</span> (key.isAcceptable()) &#123;</span><br><span class="line">                    ServerSocketChannel channel = (ServerSocketChannel) key.channel();</span><br><span class="line">                    SocketChannel socket = channel.accept();</span><br><span class="line">                    ByteBuffer buffer = ByteBuffer.allocate(<span class="number">1028</span>);</span><br><span class="line">                    socket.write(buffer);</span><br><span class="line">                    socket.close();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            set.clear();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-          
+          很早之前，接触了IO，也匆匆瞥了一眼NIO，这次重新拾起NIO，在此记录学习过程和思考。
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/11/07/NIO%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -919,6 +1017,10 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/avatar.jpg"
+                alt="caizhenya" />
+            
               <p class="site-author-name" itemprop="name">caizhenya</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
@@ -952,7 +1054,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -962,6 +1064,28 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/markytsai" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:tsaizhenya@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/Mark_Tsai_" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -996,18 +1120,21 @@
   <span class="author" itemprop="copyrightHolder">caizhenya</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
 
 
 
@@ -1151,7 +1278,337 @@
 
   
 
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
 
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
 
 
 
@@ -1160,6 +1617,21 @@
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
   
