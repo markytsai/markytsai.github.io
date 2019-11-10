@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="microservice," />
+  <meta name="keywords" content="分布式," />
 
 
 
@@ -79,19 +79,22 @@
 
 
 
-<meta name="description" content="代理是一种不可见的组件，它可以用来保障网络安全，优化带宽，服务器下线，控制请求流量和速度。网络中的请求发出之后，会经过许多代理才能到达目标服务器。 在计算机网络中，代理是客户端到服务器端的中间人。代理分为两种：正向代理，反向代理。正向代理提供安全隔离机制和性能优化的功能。客户端发出请求需要经过防火墙，请求本身是没有权限访问外网，此时就需要一个具有外网访问权限的组件来转发请求，这就是代理。代理负责接">
-<meta name="keywords" content="microservice">
+<meta name="description" content="从在学校做项目学习分布式的基础理论，到工作中实际接触分布式的环境，现在有必要再次总结一下当下分布式的一些基础理论。 CAP理论CAP理论又称CAP定理，指的是在一个分布式系统中， Consistency（一致性）、 Availability（可用性）、Partition tolerance（分区容错性），三者不可得兼。 在理论计算机科学中，CAP定理（CAP theorem），又被称作布鲁尔定理（">
+<meta name="keywords" content="分布式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="微服务中的代理角色">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;09&#x2F;%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%90%86%E8%A7%92%E8%89%B2&#x2F;index.html">
+<meta property="og:title" content="分布式理论基础">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;10&#x2F;%E5%88%86%E5%B8%83%E5%BC%8F%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80&#x2F;index.html">
 <meta property="og:site_name" content="Tsaizhenya博客">
-<meta property="og:description" content="代理是一种不可见的组件，它可以用来保障网络安全，优化带宽，服务器下线，控制请求流量和速度。网络中的请求发出之后，会经过许多代理才能到达目标服务器。 在计算机网络中，代理是客户端到服务器端的中间人。代理分为两种：正向代理，反向代理。正向代理提供安全隔离机制和性能优化的功能。客户端发出请求需要经过防火墙，请求本身是没有权限访问外网，此时就需要一个具有外网访问权限的组件来转发请求，这就是代理。代理负责接">
+<meta property="og:description" content="从在学校做项目学习分布式的基础理论，到工作中实际接触分布式的环境，现在有必要再次总结一下当下分布式的一些基础理论。 CAP理论CAP理论又称CAP定理，指的是在一个分布式系统中， Consistency（一致性）、 Availability（可用性）、Partition tolerance（分区容错性），三者不可得兼。 在理论计算机科学中，CAP定理（CAP theorem），又被称作布鲁尔定理（">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http:&#x2F;&#x2F;q0opyzozr.bkt.clouddn.com&#x2F;proxy.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;q0opyzozr.bkt.clouddn.com&#x2F;reverse-proxy.png">
-<meta property="og:updated_time" content="2019-11-09T09:17:42.293Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;11&#x2F;10&#x2F;16e541416f51bca6?w=624&amp;h=471&amp;f=png&amp;s=34284">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;11&#x2F;10&#x2F;16e5414a507b6feb?w=612&amp;h=461&amp;f=png&amp;s=41828">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;11&#x2F;10&#x2F;16e541471abbe9b8?w=1163&amp;h=558&amp;f=webp&amp;s=36356">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;11&#x2F;10&#x2F;16e5413c4c77c5e9?w=557&amp;h=559&amp;f=webp&amp;s=20958">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;11&#x2F;10&#x2F;16e541793c6ddde9?w=611&amp;h=321&amp;f=png&amp;s=25286">
+<meta property="og:updated_time" content="2019-11-10T06:56:22.266Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;q0opyzozr.bkt.clouddn.com&#x2F;proxy.png">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;11&#x2F;10&#x2F;16e541416f51bca6?w=624&amp;h=471&amp;f=png&amp;s=34284">
 
 
 
@@ -121,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/09/微服务中的代理角色/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/11/10/分布式理论基础/"/>
 
 
 
 
 
-  <title>微服务中的代理角色 | Tsaizhenya博客</title>
+  <title>分布式理论基础 | Tsaizhenya博客</title>
   
 
 
@@ -234,7 +237,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/09/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%90%86%E8%A7%92%E8%89%B2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/10/%E5%88%86%E5%B8%83%E5%BC%8F%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="caizhenya">
@@ -251,7 +254,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">微服务中的代理角色</h1>
+          <h1 class="post-title" itemprop="name headline">分布式理论基础</h1>
         
 
         <div class="post-meta">
@@ -263,8 +266,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-09T16:32:02+08:00">
-                2019-11-09
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-10T14:26:26+08:00">
+                2019-11-10
               </time>
             
 
@@ -286,8 +289,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/microservice/" itemprop="url" rel="index">
-                    <span itemprop="name">microservice</span>
+                  <a href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/" itemprop="url" rel="index">
+                    <span itemprop="name">分布式</span>
                   </a>
                 </span>
 
@@ -354,11 +357,51 @@
       
 
       
-        <p>代理是一种不可见的组件，它可以用来保障网络安全，优化带宽，服务器下线，控制请求流量和速度。网络中的请求发出之后，会经过许多代理才能到达目标服务器。</p>
-<p>在计算机网络中，代理是客户端到服务器端的中间人。代理分为两种：正向代理，反向代理。<br>正向代理提供安全隔离机制和性能优化的功能。客户端发出请求需要经过防火墙，请求本身是没有权限访问外网，此时就需要一个具有外网访问权限的组件来转发请求，这就是代理。代理负责接收内网发出的请求，经过自身业务处理，将请求发出，对于外界来说，代理是透明的，请求表面上看起来是由客户端发出。 代理除了最基础的转发功能以外，还具有缓存，优化带宽等功能。</p>
-<p><img src="http://q0opyzozr.bkt.clouddn.com/proxy.png" alt=""></p>
-<p>对于服务端来说，代理的角色是反向的。服务器端利用代理来处理请求。反向代理可以提供安全性校验，负载均衡等功能。反向代理连接后端服务器集群，对于外界来说，不会知道具体是哪一台服务器在提供服务。同样的，反向代理也可以数据缓存，请求分发来提高服务端性能。</p>
-<p><img src="http://q0opyzozr.bkt.clouddn.com/reverse-proxy.png" alt=""></p>
+        <p>从在学校做项目学习分布式的基础理论，到工作中实际接触分布式的环境，现在有必要再次总结一下当下分布式的一些基础理论。</p>
+<h3 id="CAP理论"><a href="#CAP理论" class="headerlink" title="CAP理论"></a>CAP理论</h3><p>CAP理论又称CAP定理，指的是在一个分布式系统中， Consistency（一致性）、 Availability（可用性）、Partition tolerance（分区容错性），三者不可得兼。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/11/10/16e541416f51bca6?w=624&h=471&f=png&s=34284" alt=""><br>在理论计算机科学中，CAP定理（CAP theorem），又被称作布鲁尔定理（Brewer’s theorem），它指出对于一个分布式计算系统来说，不可能同时满足以下三点：</p>
+<ul>
+<li>一致性（Consistence） :数据在多个副本之间能够保持一致</li>
+<li>可用性（Availability）:每次请求都能获取到非错的响应——但是不保证获取的数据为最新数据</li>
+<li>分区容错性（Partition tolerance） : 分布式系统在遇到某节点或网络分区故障的时候，仍然能够对外提供满足一致性和可用性的服务。</li>
+</ul>
+<blockquote>
+<p>这里解释下什么是分区：在分布式系统中，不同的节点分布在不同的子网络中，由于一些特殊的原因，这些子节点之间出现了网络不通的状态，但他们的内部子网络是正常的。从而导致了整个系统的环境被切分成了若干个孤立的区域，这就是分区。</p>
+</blockquote>
+<p>CAP三者如何选择</p>
+<ul>
+<li><p>CA without P<br>如果不要求P（不允许分区），则C（强一致性）和A（可用性）是可以保证的。但其实分区不是你想不想的问题，而是始终会存在，因此CA的系统更多的是允许分区后各子系统依然保持CA。</p>
+</li>
+<li><p>CP without A<br>如果不要求A（可用），相当于每个请求都需要在Server之间强一致，而P（分区）会导致同步时间无限延长，如此CP也是可以保证的。很多传统的数据库分布式事务都属于这种模式。</p>
+</li>
+<li><p>AP wihtout C<br>要高可用并允许分区，则需放弃一致性。一旦分区发生，节点之间可能会失去联系，为了高可用，每个节点只能用本地数据提供服务，而这样会导致全局数据的不一致性。现在众多的NoSQL都属于此类。</p>
+</li>
+</ul>
+<h3 id="BASE理论"><a href="#BASE理论" class="headerlink" title="BASE理论"></a>BASE理论</h3><p>BASE理论是由eBay架构师提出的。BASE是对CAP中一致性和可用性权衡的结果，其来源于对大规模互联网分布式系统实践的总结，是基于CAP定律逐步演化而来。其核心思想是即使无法做到强一致性，但每个应用都可以根据自身业务特点，才用适当的方式来使系统打到最终一致性。<br><img src="https://user-gold-cdn.xitu.io/2019/11/10/16e5414a507b6feb?w=612&h=461&f=png&s=41828" alt=""><br>BASE 是 Basically Available（基本可用） 、Soft-state（软状态） 和 Eventually Consistent（最终一致性） 三个短语的缩写。BASE理论是对CAP中一致性和可用性权衡的结果，其来源于对大规模互联网系统分布式实践的总结，是基于CAP定理逐步演化而来的，它大大降低了我们对系统的要求。</p>
+<p>BASE理论的三要素</p>
+<ul>
+<li>基本可用（Basically Available）</li>
+<li>软状态（Soft State）</li>
+<li>最终一致性（Eventually Consistent）</li>
+</ul>
+<ol>
+<li><p>基本可用<br>基本可用是指分布式系统在出现不可预知故障的时候，允许损失部分可用性。但是，这绝不等价于系统不可用。比如：响应时间上的损失:正常情况下，一个在线搜索引擎需要在0.5秒之内返回给用户相应的查询结果，但由于出现故障，查询结果的响应时间增加了1~2秒。系统功能上的损失：正常情况下，在一个电子商务网站上进行购物的时候，消费者几乎能够顺利完成每一笔订单，但是在一些节日大促购物高峰的时候，由于消费者的购物行为激增，为了保护购物系统的稳定性，部分消费者可能会被引导到一个降级页面。</p>
+</li>
+<li><p>软状态<br>软状态指允许系统中的数据存在中间状态，并认为该中间状态的存在不会影响系统的整体可用性，即允许系统在不同节点的数据副本之间进行数据同步的过程存在延时</p>
+</li>
+<li><p>最终一致性<br>最终一致性强调的是系统中所有的数据副本，在经过一段时间的同步后，最终能够达到一个一致的状态。因此，最终一致性的本质是需要系统保证最终数据能够达到一致，而不需要实时保证系统数据的强一致性。</p>
+</li>
+</ol>
+<h3 id="2PC协议"><a href="#2PC协议" class="headerlink" title="2PC协议"></a>2PC协议</h3><p>2PC协议，分为两个阶段提交一个事务。并通过协调者和各个参与者的配合，实现分布式一致性。</p>
+<p>2PC(tow phase commit)两阶段提交，分成两个阶段，先由一方进行提议(propose)并收集其他节点的反馈(vote)，再根据反馈决定提交(commit)或中止(abort)事务。我们将提议的节点称为协调者(coordinator)，其他参与决议节点称为参与者(participants, 或cohorts)：</p>
+<p>在阶段1中，coordinator发起一个提议，分别问询各participant是否接受。<br><img src="https://user-gold-cdn.xitu.io/2019/11/10/16e541471abbe9b8?w=1163&h=558&f=webp&s=36356" alt=""><br>在阶段2中，coordinator根据participant的反馈，提交或中止事务，如果participant全部同意则提交，只要有一个participant不同意就中止。<br><img src="https://user-gold-cdn.xitu.io/2019/11/10/16e5413c4c77c5e9?w=557&h=559&f=webp&s=20958" alt=""></p>
+<h3 id="3PC协议"><a href="#3PC协议" class="headerlink" title="3PC协议"></a>3PC协议</h3><p>首先需要知道3PC协议出现的原因，看起来2PC协议已经可以完全满足数据的要求，为什么又会提出来一个3PC协议？<br>相比2PC，3PC增加了一个准备提交(prepare to commit)阶段来解决以上问题：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/11/10/16e541793c6ddde9?w=611&h=321&f=png&s=25286" alt=""><br>coordinator接收完participant的反馈(vote)之后，进入阶段2，给各个participant发送准备提交(prepare to commit)指令。participant接到准备提交指令后可以锁资源，但要求相关操作必须可回滚。coordinator接收完确认(ACK)后进入阶段3、进行commit/abort，3PC的阶段3与2PC的阶段2无异。协调者备份(coordinator watchdog)、状态记录(logging)同样应用在3PC。</p>
+<p>participant如果在不同阶段宕机，我们来看看3PC如何应对：</p>
+<p>阶段1: coordinator或watchdog未收到宕机participant的vote，直接中止事务；宕机的participant恢复后，读取logging发现未发出赞成vote，自行中止该次事务</p>
+<p>阶段2: coordinator未收到宕机participant的precommit ACK，但因为之前已经收到了宕机participant的赞成反馈(不然也不会进入到阶段2)，coordinator进行commit；watchdog可以通过问询其他participant获得这些信息，过程同理；宕机的participant恢复后发现收到precommit或已经发出赞成vote，则自行commit该次事务</p>
+<p>阶段3: 即便coordinator或watchdog未收到宕机participant的commit ACK，也结束该次事务；宕机的participant恢复后发现收到commit或者precommit，也将自行commit该次事务</p>
+<p>既然交互次数增加，那么相应的延时就会增加，但是系统的整体性能得到了提高，在一些业务场景下是可以接受的。</p>
 
       
     </div>
@@ -376,7 +419,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/microservice/" rel="tag"># microservice</a>
+            <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" rel="tag"># 分布式</a>
           
         </div>
       
@@ -389,8 +432,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/09/Word-Power-Made-Easy-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="next" title="Word Power Made Easy 读书笔记">
-                <i class="fa fa-chevron-left"></i> Word Power Made Easy 读书笔记
+              <a href="/2019/11/09/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%90%86%E8%A7%92%E8%89%B2/" rel="next" title="微服务中的代理角色">
+                <i class="fa fa-chevron-left"></i> 微服务中的代理角色
               </a>
             
           </div>
@@ -398,10 +441,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/11/10/%E5%88%86%E5%B8%83%E5%BC%8F%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/" rel="prev" title="分布式理论基础">
-                分布式理论基础 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -453,8 +492,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -540,6 +588,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CAP理论"><span class="nav-number">1.</span> <span class="nav-text">CAP理论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BASE理论"><span class="nav-number">2.</span> <span class="nav-text">BASE理论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2PC协议"><span class="nav-number">3.</span> <span class="nav-text">2PC协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3PC协议"><span class="nav-number">4.</span> <span class="nav-text">3PC协议</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
