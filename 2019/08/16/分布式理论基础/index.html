@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="java," />
+  <meta name="keywords" content="分布式," />
 
 
 
@@ -79,16 +79,22 @@
 
 
 
-<meta name="description" content="本文是对Java中两种比较方式的阐述。">
-<meta name="keywords" content="java">
+<meta name="description" content="从在学校做项目学习分布式的基础理论，到工作中实际接触分布式的环境，现在有必要再次总结一下当下分布式的一些基础理论。">
+<meta name="keywords" content="分布式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Comparable和Comparator的比较">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;08&#x2F;Comparable%E5%92%8CComparator%E7%9A%84%E6%AF%94%E8%BE%83&#x2F;index.html">
+<meta property="og:title" content="分布式理论基础">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;08&#x2F;16&#x2F;%E5%88%86%E5%B8%83%E5%BC%8F%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80&#x2F;index.html">
 <meta property="og:site_name" content="Tsaizhenya博客">
-<meta property="og:description" content="本文是对Java中两种比较方式的阐述。">
+<meta property="og:description" content="从在学校做项目学习分布式的基础理论，到工作中实际接触分布式的环境，现在有必要再次总结一下当下分布式的一些基础理论。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-09T02:52:26.565Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;11&#x2F;10&#x2F;16e541416f51bca6?w=624&amp;h=471&amp;f=png&amp;s=34284">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;11&#x2F;10&#x2F;16e5414a507b6feb?w=612&amp;h=461&amp;f=png&amp;s=41828">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;11&#x2F;10&#x2F;16e541471abbe9b8?w=1163&amp;h=558&amp;f=webp&amp;s=36356">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;11&#x2F;10&#x2F;16e5413c4c77c5e9?w=557&amp;h=559&amp;f=webp&amp;s=20958">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;11&#x2F;10&#x2F;16e541793c6ddde9?w=611&amp;h=321&amp;f=png&amp;s=25286">
+<meta property="og:updated_time" content="2019-11-10T07:35:40.686Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;11&#x2F;10&#x2F;16e541416f51bca6?w=624&amp;h=471&amp;f=png&amp;s=34284">
 
 
 
@@ -118,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/08/Comparable和Comparator的比较/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/08/16/分布式理论基础/"/>
 
 
 
 
 
-  <title>Comparable和Comparator的比较 | Tsaizhenya博客</title>
+  <title>分布式理论基础 | Tsaizhenya博客</title>
   
 
 
@@ -231,7 +237,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/08/Comparable%E5%92%8CComparator%E7%9A%84%E6%AF%94%E8%BE%83/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/16/%E5%88%86%E5%B8%83%E5%BC%8F%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="caizhenya">
@@ -248,7 +254,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Comparable和Comparator的比较</h1>
+          <h1 class="post-title" itemprop="name headline">分布式理论基础</h1>
         
 
         <div class="post-meta">
@@ -260,8 +266,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-08T22:19:04+08:00">
-                2019-11-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-16T14:26:26+08:00">
+                2019-08-16
               </time>
             
 
@@ -283,8 +289,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index">
-                    <span itemprop="name">Java基础</span>
+                  <a href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/" itemprop="url" rel="index">
+                    <span itemprop="name">分布式</span>
                   </a>
                 </span>
 
@@ -338,7 +344,7 @@
 
           
               <div class="post-description">
-                  本文是对Java中两种比较方式的阐述。
+                  从在学校做项目学习分布式的基础理论，到工作中实际接触分布式的环境，现在有必要再次总结一下当下分布式的一些基础理论。
               </div>
           
 
@@ -355,30 +361,51 @@
       
 
       
-        <p>本文是对Java中两种比较方式的阐述。 </p>
-<p>Comparable接口的定义可以看出是一个泛型，声明如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public interface Comparable&lt;T&gt; &#123;</span><br><span class="line">    /**</span><br><span class="line">     * @param   o the object to be compared.</span><br><span class="line">     * @return  a negative integer, zero, or a positive integer as this object</span><br><span class="line">     *          is less than, equal to, or greater than the specified object.</span><br><span class="line">     *</span><br><span class="line">     * @throws NullPointerException if the specified object is null</span><br><span class="line">     * @throws ClassCastException if the specified object&apos;s type prevents it</span><br><span class="line">     *         from being compared to this object.</span><br><span class="line">     */</span><br><span class="line">    public int compareTo(T o);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>当返回结果是负值、零、正值的时候，分别代表着当前对象小于、等于、大于传进来的参数值。下面举一个例子。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">class Person implements Comparable&lt;Person&gt; &#123;</span><br><span class="line">	private String name;</span><br><span class="line">	private int age;</span><br><span class="line"></span><br><span class="line">	public Person(String name, int age) &#123;</span><br><span class="line">		super();</span><br><span class="line">		this.name = name;</span><br><span class="line">		this.age = age;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public String toString() &#123;</span><br><span class="line">		return &quot;Person [name=&quot; + name + &quot;, age=&quot; + age + &quot;]&quot;;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public String getName() &#123;</span><br><span class="line">		return name;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public int getAge() &#123;</span><br><span class="line">		return age;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public int compareTo(Person o) &#123;</span><br><span class="line">		// TODO Auto-generated method stub</span><br><span class="line">		return this.age - o.age;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">	public void comparableTest() &#123;</span><br><span class="line">		List&lt;Person&gt; group = new ArrayList&lt;&gt;();</span><br><span class="line">		group.add(new Person(&quot;aa&quot;, 10));</span><br><span class="line">		group.add(new Person(&quot;bb&quot;, 5));</span><br><span class="line">		group.add(new Person(&quot;cc&quot;, 20));</span><br><span class="line"></span><br><span class="line">		Collections.sort(group);</span><br><span class="line">		group.forEach(p -&gt; System.out.println(p));</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<p>运行结果如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Person [name=bb, age=5]</span><br><span class="line">Person [name=aa, age=10]</span><br><span class="line">Person [name=cc, age=20]</span><br></pre></td></tr></table></figure>
-<p>返回正数，表示this指示的值要排在传进参数值的后面，这个可以理解为对每一个数和它后面的数进行比较，如果返回正值，那么需要交换位置，也就是升序排列；返回负值的推理类似。</p>
-<p>这里是类实现Comparable<T>接口，并且要求重写<code>public int compareTo(Person o);</code>方法。但是如果我们不能对类进行修改，那么该怎么对对象进行排序呢，还有另外一种实现排序的方法，就是实现Comparator<T>接口排序。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Collections.sort(group, new Comparator&lt;Person&gt;() &#123;</span><br><span class="line">                @Override</span><br><span class="line">		public int compare(Person o1, Person o2) &#123;</span><br><span class="line">			return o2.getAge() - o1.getAge();</span><br><span class="line">		&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>在这里，当o2的age值大于o1的age值时，o2和o1的位置需要交换，所以这里的结果是以降序排列呈现的。<br>在Java1.8之后，可以使用lambda表达式来进一步简化代码。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">group.sort((o1, o2) -&gt; o1.getAge() - o2.getAge());</span><br></pre></td></tr></table></figure>
-<p>也可以这样写，使用Comparator.comparing的方式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">group.sort(Comparator.comparing(person -&gt; person.getAge()));</span><br></pre></td></tr></table></figure>
-
-<p>使用静态方法的引用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">group.sort(Comparator.comparing(Person::getAge));</span><br></pre></td></tr></table></figure>
-<p>如果需要逆序排列，需要reverse()函数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">group.sort(Comparator.comparing(Person::getAge).reverse());</span><br></pre></td></tr></table></figure>
-
-<p>可以把多个Comparator链在一起去逐步实现更复杂的比较逻辑</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">group.sort(Comparator.comparing(Person::getAge).thenComparing(Person::getName));</span><br></pre></td></tr></table></figure>
-
-
+        <p>从在学校做项目学习分布式的基础理论，到工作中实际接触分布式的环境，现在有必要再次总结一下当下分布式的一些基础理论。</p>
+<h3 id="CAP理论"><a href="#CAP理论" class="headerlink" title="CAP理论"></a>CAP理论</h3><p>CAP理论又称CAP定理，指的是在一个分布式系统中， Consistency（一致性）、 Availability（可用性）、Partition tolerance（分区容错性），三者不可得兼。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/11/10/16e541416f51bca6?w=624&h=471&f=png&s=34284" alt=""><br>在理论计算机科学中，CAP定理（CAP theorem），又被称作布鲁尔定理（Brewer’s theorem），它指出对于一个分布式计算系统来说，不可能同时满足以下三点：</p>
+<ul>
+<li>一致性（Consistence） :数据在多个副本之间能够保持一致</li>
+<li>可用性（Availability）:每次请求都能获取到非错的响应——但是不保证获取的数据为最新数据</li>
+<li>分区容错性（Partition tolerance） : 分布式系统在遇到某节点或网络分区故障的时候，仍然能够对外提供满足一致性和可用性的服务。</li>
+</ul>
+<blockquote>
+<p>这里解释下什么是分区：在分布式系统中，不同的节点分布在不同的子网络中，由于一些特殊的原因，这些子节点之间出现了网络不通的状态，但他们的内部子网络是正常的。从而导致了整个系统的环境被切分成了若干个孤立的区域，这就是分区。</p>
+</blockquote>
+<p>CAP三者如何选择</p>
+<ul>
+<li><p>CA without P<br>如果不要求P（不允许分区），则C（强一致性）和A（可用性）是可以保证的。但其实分区不是你想不想的问题，而是始终会存在，因此CA的系统更多的是允许分区后各子系统依然保持CA。</p>
+</li>
+<li><p>CP without A<br>如果不要求A（可用），相当于每个请求都需要在Server之间强一致，而P（分区）会导致同步时间无限延长，如此CP也是可以保证的。很多传统的数据库分布式事务都属于这种模式。</p>
+</li>
+<li><p>AP wihtout C<br>要高可用并允许分区，则需放弃一致性。一旦分区发生，节点之间可能会失去联系，为了高可用，每个节点只能用本地数据提供服务，而这样会导致全局数据的不一致性。现在众多的NoSQL都属于此类。</p>
+</li>
+</ul>
+<h3 id="BASE理论"><a href="#BASE理论" class="headerlink" title="BASE理论"></a>BASE理论</h3><p>BASE理论是由eBay架构师提出的。BASE是对CAP中一致性和可用性权衡的结果，其来源于对大规模互联网分布式系统实践的总结，是基于CAP定律逐步演化而来。其核心思想是即使无法做到强一致性，但每个应用都可以根据自身业务特点，才用适当的方式来使系统打到最终一致性。<br><img src="https://user-gold-cdn.xitu.io/2019/11/10/16e5414a507b6feb?w=612&h=461&f=png&s=41828" alt=""><br>BASE 是 Basically Available（基本可用） 、Soft-state（软状态） 和 Eventually Consistent（最终一致性） 三个短语的缩写。BASE理论是对CAP中一致性和可用性权衡的结果，其来源于对大规模互联网系统分布式实践的总结，是基于CAP定理逐步演化而来的，它大大降低了我们对系统的要求。</p>
+<p>BASE理论的三要素</p>
+<ul>
+<li>基本可用（Basically Available）</li>
+<li>软状态（Soft State）</li>
+<li>最终一致性（Eventually Consistent）</li>
+</ul>
+<ol>
+<li><p>基本可用<br>基本可用是指分布式系统在出现不可预知故障的时候，允许损失部分可用性。但是，这绝不等价于系统不可用。比如：响应时间上的损失:正常情况下，一个在线搜索引擎需要在0.5秒之内返回给用户相应的查询结果，但由于出现故障，查询结果的响应时间增加了1~2秒。系统功能上的损失：正常情况下，在一个电子商务网站上进行购物的时候，消费者几乎能够顺利完成每一笔订单，但是在一些节日大促购物高峰的时候，由于消费者的购物行为激增，为了保护购物系统的稳定性，部分消费者可能会被引导到一个降级页面。</p>
+</li>
+<li><p>软状态<br>软状态指允许系统中的数据存在中间状态，并认为该中间状态的存在不会影响系统的整体可用性，即允许系统在不同节点的数据副本之间进行数据同步的过程存在延时</p>
+</li>
+<li><p>最终一致性<br>最终一致性强调的是系统中所有的数据副本，在经过一段时间的同步后，最终能够达到一个一致的状态。因此，最终一致性的本质是需要系统保证最终数据能够达到一致，而不需要实时保证系统数据的强一致性。</p>
+</li>
+</ol>
+<h3 id="2PC协议"><a href="#2PC协议" class="headerlink" title="2PC协议"></a>2PC协议</h3><p>2PC协议，分为两个阶段提交一个事务。并通过协调者和各个参与者的配合，实现分布式一致性。</p>
+<p>2PC(tow phase commit)两阶段提交，分成两个阶段，先由一方进行提议(propose)并收集其他节点的反馈(vote)，再根据反馈决定提交(commit)或中止(abort)事务。我们将提议的节点称为协调者(coordinator)，其他参与决议节点称为参与者(participants, 或cohorts)：</p>
+<p>在阶段1中，coordinator发起一个提议，分别问询各participant是否接受。<br><img src="https://user-gold-cdn.xitu.io/2019/11/10/16e541471abbe9b8?w=1163&h=558&f=webp&s=36356" alt=""><br>在阶段2中，coordinator根据participant的反馈，提交或中止事务，如果participant全部同意则提交，只要有一个participant不同意就中止。<br><img src="https://user-gold-cdn.xitu.io/2019/11/10/16e5413c4c77c5e9?w=557&h=559&f=webp&s=20958" alt=""></p>
+<h3 id="3PC协议"><a href="#3PC协议" class="headerlink" title="3PC协议"></a>3PC协议</h3><p>首先需要知道3PC协议出现的原因，看起来2PC协议已经可以完全满足数据的要求，为什么又会提出来一个3PC协议？<br>相比2PC，3PC增加了一个准备提交(prepare to commit)阶段来解决以上问题：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/11/10/16e541793c6ddde9?w=611&h=321&f=png&s=25286" alt=""><br>coordinator接收完participant的反馈(vote)之后，进入阶段2，给各个participant发送准备提交(prepare to commit)指令。participant接到准备提交指令后可以锁资源，但要求相关操作必须可回滚。coordinator接收完确认(ACK)后进入阶段3、进行commit/abort，3PC的阶段3与2PC的阶段2无异。协调者备份(coordinator watchdog)、状态记录(logging)同样应用在3PC。</p>
+<p>participant如果在不同阶段宕机，我们来看看3PC如何应对：</p>
+<p>阶段1: coordinator或watchdog未收到宕机participant的vote，直接中止事务；宕机的participant恢复后，读取logging发现未发出赞成vote，自行中止该次事务</p>
+<p>阶段2: coordinator未收到宕机participant的precommit ACK，但因为之前已经收到了宕机participant的赞成反馈(不然也不会进入到阶段2)，coordinator进行commit；watchdog可以通过问询其他participant获得这些信息，过程同理；宕机的participant恢复后发现收到precommit或已经发出赞成vote，则自行commit该次事务</p>
+<p>阶段3: 即便coordinator或watchdog未收到宕机participant的commit ACK，也结束该次事务；宕机的participant恢复后发现收到commit或者precommit，也将自行commit该次事务</p>
+<p>既然交互次数增加，那么相应的延时就会增加，但是系统的整体性能得到了提高，在一些业务场景下是可以接受的。</p>
 
       
     </div>
@@ -396,7 +423,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/java/" rel="tag"># java</a>
+            <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" rel="tag"># 分布式</a>
           
         </div>
       
@@ -409,8 +436,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/08/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" rel="next" title="单例模式">
-                <i class="fa fa-chevron-left"></i> 单例模式
+              <a href="/2019/08/10/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97-Rocketmq/" rel="next" title="消息队列-Rocketmq">
+                <i class="fa fa-chevron-left"></i> 消息队列-Rocketmq
               </a>
             
           </div>
@@ -419,8 +446,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/08/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E6%9D%82%E6%83%B3/" rel="prev" title="英语学习杂想">
-                英语学习杂想 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/06/NIO%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/" rel="prev" title="NIO入门学习">
+                NIO入门学习 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -473,8 +500,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -560,6 +596,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CAP理论"><span class="nav-number">1.</span> <span class="nav-text">CAP理论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BASE理论"><span class="nav-number">2.</span> <span class="nav-text">BASE理论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2PC协议"><span class="nav-number">3.</span> <span class="nav-text">2PC协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3PC协议"><span class="nav-number">4.</span> <span class="nav-text">3PC协议</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
