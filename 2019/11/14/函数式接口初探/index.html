@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Tsaizhenya博客">
 <meta property="og:description" content="编写能够应对变化需求的代码不是那么容易。函数式接口编程给我们提供一种崭新的思路。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-14T06:31:24.659Z">
+<meta property="og:updated_time" content="2019-11-14T06:49:49.779Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -355,7 +355,10 @@
       
 
       
-        <p>行为参数化传递代码</p>
+        <h3 id="行为参数化"><a href="#行为参数化" class="headerlink" title="行为参数化"></a>行为参数化</h3><p>软件工程中一个众所周知的问题就是不管你做什么，用户的需求肯定会改变。如果我们没有在代码设计之初就考虑到以后可能出现变更的情况，那么在软件的后续迭代中，类似的新的功能增加会带来不一样的挑战，而且长期看来，维护性也会大大降低。</p>
+<p>行为参数化就是可以处理频繁需求变更场景的一种软件开发方案。</p>
+<p>接下来，我将从筛选指定特征的学生这个场景入手，一步步了解函数式编程的魅力所在。</p>
+<p>这是一个学生实体对象，我们需要对其中的特征进行筛选。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> score;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> classRoom;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>现在筛选出分数高于90的学生。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 筛选出分数大于等于90分的学生</span></span><br><span class="line"><span class="function">List&lt;Student&gt; <span class="title">selectScoreGreaterThan90</span> <span class="params">(List&lt;Student&gt; students)</span> </span>&#123;</span><br><span class="line">    List&lt;Student&gt; studentList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (Student student : students) &#123;</span><br><span class="line">        <span class="keyword">if</span> (student.getScore() &gt;= <span class="number">90</span>) &#123;</span><br><span class="line">            studentList.add(student);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> studentList;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -375,7 +378,18 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 公共筛选方法</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;Student&gt; <span class="title">filterStudent</span><span class="params">(List&lt;Student&gt; students, StudentSelector selector)</span> </span>&#123;</span><br><span class="line">        List&lt;Student&gt; studentList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (Student student : students) &#123;</span><br><span class="line">            <span class="keyword">if</span> (selector.select(student)) &#123;</span><br><span class="line">                studentList.add(student);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> studentList;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <p>直接调用筛选方法，传入实例化的具体逻辑类</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(filterStudent(students, <span class="keyword">new</span> ScoreSelector()));</span><br><span class="line">print(filterStudent(students, <span class="keyword">new</span> ClassSelector()));</span><br></pre></td></tr></table></figure>
-<p>这样我们可以得到期望的结果。现在回头看，这种方式很像策略模式，将策略实现作为入参之一，需要哪种实现，就传入哪种实现类，灵活性大大增加，</p>
+<p>这样我们可以得到期望的结果。现在回头看，这种方式很像策略模式，将策略实现作为入参之一，需要哪种实现，就传入哪种实现类，灵活性大大增加。</p>
+<p>现在我们可以尝试匿名类来实现，这样可以省去创建新的实现类这种繁琐的动作。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(filterStudent(students, (Student student) -&gt; student.getScore() &gt;= <span class="number">90</span>));</span><br><span class="line">print(filterStudent(students, (Student student) -&gt; student.getClassRoom() == <span class="number">1</span>));</span><br></pre></td></tr></table></figure>
+<p>也行这里很产生很多疑问，为什么这种匿名表达式会像正常实例化的类一样进行工作？</p>
+<p>这里我们可以找到以前写代码的感觉。当我们需要排序的行为时，我们需要传入一个比较器Comparator，而且这个类我们也一般写一个匿名类，比如这样</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">students.sort(<span class="keyword">new</span> Comparator&lt;Student&gt;() &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Student s1, Student s2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> s1.getScore().compareTo(s2.getScore());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其实这里也是一个参数行为化的一种体现，我们可以找到Comparator的源码接口。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Comparator</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">    <span class="function">pubic <span class="keyword">int</span> <span class="title">compare</span><span class="params">(T o1, T o2)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>另外一种情况是在我们写BIO服务端模型的时候，服务端SocketServer成功接受一个Socket就会新创建一个线程来负责处理这个Socket请求。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// do something here</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>这些其实都是我们日常代码中行为参数化的体现。</p>
 
       
     </div>
@@ -466,8 +480,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -553,6 +576,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#行为参数化"><span class="nav-number">1.</span> <span class="nav-text">行为参数化</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
