@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Tsaizhenya博客">
 <meta property="og:description" content="编写能够应对变化需求的代码不是那么容易。函数式接口编程给我们提供一种崭新的思路。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-14T06:54:02.883Z">
+<meta property="og:updated_time" content="2019-11-14T07:26:36.321Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -390,6 +390,17 @@
 <p>另外一种情况是在我们写BIO服务端模型的时候，服务端SocketServer成功接受一个Socket就会新创建一个线程来负责处理这个Socket请求。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// do something here</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>这些其实都是我们日常代码中行为参数化的体现。</p>
+<h3 id="Lambda表达式"><a href="#Lambda表达式" class="headerlink" title="Lambda表达式"></a>Lambda表达式</h3><p>行为参数化设计固然可以提高程序灵活性和可扩展性，但是代码仍然不够简洁，现在开始，我将开始把Java8中的lambda表达式展现出来，介绍lambda表达式的使用场合，感受lambda是如何使代码更简洁、更灵活。</p>
+<p>Lambda本身很难定义，但是它有几个显著的特征</p>
+<ul>
+<li>匿名：没有一个明确的名称，写得少但是表达的意思丰富</li>
+<li>函数：lambda也是函数，不属于某个特定的类，但是和方法有相似的特征，有参数列表、函数主体、返回类型，异常</li>
+<li>传递：lambda表达式可以作为参数传递给方法或者存储的变量中</li>
+<li>简洁：不需要像匿名类写很多模板代码</li>
+</ul>
+<p>我们继续将之前的学生列表作为例子</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(filterStudent(students, (Student student) -&gt; student.getScore() &gt;= <span class="number">90</span>));</span><br><span class="line">print(filterStudent(students, (Student student) -&gt; student.getClassRoom() == <span class="number">1</span>));</span><br></pre></td></tr></table></figure>
+<p>代码更加简洁，但是做得事情没有变少。根据物质守恒定律，写得少了，就要思考多了。我们需要对这种lambda的编程风格理解透彻，才能在写类似代码的时候做到游刃有余。</p>
 
       
     </div>
@@ -590,7 +601,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#行为参数化"><span class="nav-number">1.</span> <span class="nav-text">行为参数化</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#行为参数化"><span class="nav-number">1.</span> <span class="nav-text">行为参数化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lambda表达式"><span class="nav-number">2.</span> <span class="nav-text">Lambda表达式</span></a></li></ol></div>
             
 
           </div>
