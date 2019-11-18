@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Tsaizhenya博客">
 <meta property="og:description" content="编写能够应对变化需求的代码不是那么容易。函数式接口编程给我们提供一种崭新的思路。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-16T08:07:04.521Z">
+<meta property="og:updated_time" content="2019-11-18T03:49:44.544Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -407,7 +407,35 @@
 <li>箭头</li>
 <li>lambda主体</li>
 </ul>
-<p>下面给出几个例子<br>|使用案例|Lambda示例|<br>|-|-|<br>|布尔表达式|(List<String> list) -&gt; list.isEmpty()|<br>|创建对象|() -&gt; new Apple(10)|<br>|消费|(Apple a) -&gt; { System.out.println(a.getKillos());}|<br>|映射|(String s) -&gt; s.length()|<br>|比较|(Apple a1, Apple a2) -&gt; a1.getKillos().compareTo(a2.getKillos())|</p>
+<p>下面给出几个例子</p>
+<table>
+<thead>
+<tr>
+<th>使用案例</th>
+<th>Lambda示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>布尔表达式</td>
+<td>(List<String> list) -&gt; list.isEmpty()</td>
+</tr>
+<tr>
+<td>创建对象</td>
+<td>() -&gt; new Apple(10)</td>
+</tr>
+<tr>
+<td>消费</td>
+<td>(Apple a) -&gt; { System.out.println(a.getKillos());}</td>
+</tr>
+<tr>
+<td>映射</td>
+<td>(String s) -&gt; s.length()</td>
+</tr>
+<tr>
+<td>比较</td>
+<td>(Apple a1, Apple a2) -&gt; a1.getKillos().compareTo(a2.getKillos())</td>
+</tr>
+</tbody></table>
 <h3 id="函数式接口"><a href="#函数式接口" class="headerlink" title="函数式接口"></a>函数式接口</h3><p>所谓函数式接口，是只定义了一个抽象方法的接口。比如已知的</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Comparator</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">compare</span><span class="params">(T o1, T o2)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Callable</span>&lt;<span class="title">V</span>&gt; </span>&#123;</span><br><span class="line">    <span class="function">V <span class="title">call</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>函数式接口的作用是在Lambda表达式中允许直接以内联的形式给函数式接口的抽象方法提供实现，并把整个表达式作为函数式接口的实例。我们可以回想一下匿名类的使用，Lambda表达式在匿名类的基础上使用了函数式接口的特性，使得这个表达更加简洁。</p>
